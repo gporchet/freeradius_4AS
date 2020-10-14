@@ -1,0 +1,7 @@
+ntlm_auth.authorize {
+	if (!control:Auth-Type && User-Password) {
+		update control {
+			Auth-Type := ntlm_auth
+		}
+	}
+}
